@@ -1,0 +1,28 @@
+# ---- Vivado / Xilinx generated ----
+*.jou
+*.log
+*.str
+*.pb
+*.backup.*
+.Xil/
+*.cache/
+*.hw/
+*.sim/
+*.runs/
+*.gen/
+*.ip_user_files/
+usage_statistics_webtalk.*
+webtalk*.jou
+webtalk*.log
+
+# Vivado project files live in a separate working dir; canonical sources are in rtl/ & tb/.
+# Uncomment the next line if you ever copy a .xpr project into the repo:
+# *.xpr
+
+# ---- License files (never commit) ----
+*.lic
+
+# ---- OS ----
+Thumbs.db
+.DS_Store
+desktop.ini

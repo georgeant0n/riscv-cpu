@@ -12,9 +12,9 @@ self-checking testbench.
 |--------|-------------|--------|
 | `pc`      | Program counter (sync reset) | ✅ passes `pc_tb` |
 | `regfile` | 32×32-bit register file, 2 read / 1 write port, x0 hardwired to 0 | ✅ passes `regfile_tb` |
-| `alu`     | Arithmetic/logic unit | ⏳ next |
-| `immgen`  | Immediate generator | ⏳ |
-| `control` | Main + ALU decoder | ⏳ |
+| `alu`     | ADD / SUB / AND / OR / signed SLT + zero flag | ✅ passes `alu_tb` |
+| `immgen`  | Immediate generator for I / S / B / J formats (sign-extended) | ✅ passes `immgen_tb` |
+| `control` | Main + ALU decoder | ⏳ next |
 | `imem` / `dmem` | Instruction & data memories | ⏳ |
 
 ## Repository structure

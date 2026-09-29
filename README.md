@@ -5,8 +5,9 @@ testbenches, and targeted to a Xilinx Artix-7 FPGA (Digilent Basys 3). Built as 
 VLSI / digital-design portfolio project.
 
 ## Status
-**Week 2** — building the single-cycle datapath, module by module. Each module has a
-self-checking testbench.
+**Stage 2 complete** — every building block of the single-cycle datapath is implemented and
+verified by its own self-checking testbench (7 modules, 55 checks, all passing).
+**Next:** integrate them into a top-level CPU and run real programs.
 
 | Module | Description | Status |
 |--------|-------------|--------|
@@ -14,8 +15,10 @@ self-checking testbench.
 | `regfile` | 32×32-bit register file, 2 read / 1 write port, x0 hardwired to 0 | ✅ passes `regfile_tb` |
 | `alu`     | ADD / SUB / AND / OR / signed SLT + zero flag | ✅ passes `alu_tb` |
 | `immgen`  | Immediate generator for I / S / B / J formats (sign-extended) | ✅ passes `immgen_tb` |
-| `control` | Main + ALU decoder | ⏳ next |
-| `imem` / `dmem` | Instruction & data memories | ⏳ |
+| `control` | Main decoder + ALU decoder + next-PC select (lw, sw, R-type, addi, beq, jal) | ✅ passes `control_tb` |
+| `imem`    | Instruction memory (ROM, loaded with `$readmemh`, word-addressed) | ✅ passes `imem_tb` |
+| `dmem`    | Data memory (sync write, combinational read) | ✅ passes `dmem_tb` |
+| `cpu` (top) | Wire everything into a working processor | ⏳ next (stage 3) |
 
 ## Repository structure
 | Folder | Contents |

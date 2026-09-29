@@ -1,0 +1,5 @@
+00500093  // word 0 (addr  0): addi x1, x0, 5
+0080A103  // word 1 (addr  4): lw   x2, 8(x1)
+0020A623  // word 2 (addr  8): sw   x2, 12(x1)
+00208463  // word 3 (addr 12): beq  x1, x2, +8
+010000EF  // word 4 (addr 16): jal  x1, +16

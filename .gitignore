@@ -19,6 +19,11 @@ webtalk*.log
 # Uncomment the next line if you ever copy a .xpr project into the repo:
 # *.xpr
 
+# Command-line simulation output (sim\run.bat)
+sim/work/
+xsim.dir/
+*.wdb
+
 # ---- License files (never commit) ----
 *.lic
 
